@@ -1,56 +1,121 @@
 const frenchTestQuestions = [
     {
-        question: "Comment dit-on 'apple' en français?",
-        options: ["Pomme", "Banane", "Orange", "Raisin"],
-        answer: "Pomme"
-    },
-    {
-        question: "Choisissez le bon verbe: Je ____ au cinéma tous les samedis.",
-        options: ["vais", "va", "aller", "allons"],
-        answer: "vais"
-    },
-    {
-        question: "Quelle est la forme correcte de l'article pour le mot 'chien'?",
-        options: ["La", "Le", "Les", "L'"],
-        answer: "Le"
-    },
-    {
-        question: "Conjuguez le verbe 'être' pour 'ils' au présent.",
-        options: ["sont", "est", "es", "sommes"],
-        answer: "sont"
-    },
-    {
-        question: "Comment dit-on 'I am tired' en français?",
-        options: ["Je suis fatigué", "Tu es fatigué", "Il est fatigué", "Nous sommes fatigués"],
-        answer: "Je suis fatigué"
-    },
-    {
-        question: "Choisissez la bonne forme: Nous ____ la musique.",
-        options: ["écoutons", "écoute", "écouter", "écoutes"],
-        answer: "écoutons"
-    },
-    {
         question: "Quelle est la traduction de 'They are going to the beach'?",
-        options: ["Ils vont à la plage", "Nous allons à la plage", "Tu vas à la plage", "Il va à la plage"],
+        options: ["Tu vas à la plage", "Ils vont à la plage", "Il va à la plage", "Nous allons à la plage"],
         answer: "Ils vont à la plage"
     },
     {
         question: "Choisissez la bonne réponse: ____ est ton nom?",
-        options: ["Quel", "Quelle", "Quels", "Quelles"],
+        options: ["Quelles", "Quel", "Quels", "Quelle"],
         answer: "Quel"
     },
     {
         question: "Comment dit-on 'good evening' en français?",
-        options: ["Bonsoir", "Bonjour", "Bonne nuit", "Salut"],
+        options: ["Salut", "Bonjour", "Bonne nuit", "Bonsoir"],
         answer: "Bonsoir"
     },
     {
         question: "Complétez la phrase: Elle ____ un livre.",
-        options: ["lit", "lis", "lisent", "lire"],
+        options: ["lis", "lit", "lire", "lisent"],
         answer: "lit"
+    },
+    {
+        question: "Comment dit-on 'She is happy' en français?",
+        options: ["Vous êtes contents", "Elle est contente", "Il est content", "Tu es content"],
+        answer: "Elle est contente"
+    },
+    {
+        question: "Complétez: Nous ____ souvent du café.",
+        options: ["boivent", "boit", "buvons", "bois"],
+        answer: "buvons"
+    },
+    {
+        question: "Quelle est la bonne réponse pour 'I like chocolate'?",
+        options: ["J'aime le chocolat", "Je veux chocolat", "J'aime chocolat", "Je mange chocolat"],
+        answer: "J'aime le chocolat"
+    },
+    {
+        question: "Choisissez la forme correcte pour 'They finished the book'.",
+        options: ["Ils finiront le livre", "Ils finiraient le livre", "Ils finissent le livre", "Ils ont fini le livre"],
+        answer: "Ils ont fini le livre"
+    },
+    {
+        question: "Comment dit-on 'I would like to travel' en français?",
+        options: ["Je veux voyager", "Je voyage", "Je vais voyager", "J'aimerais voyager"],
+        answer: "J'aimerais voyager"
+    },
+    {
+        question: "Choisissez la bonne option pour compléter: Ils ____ depuis une heure.",
+        options: ["attendez", "attendent", "attendons", "attend"],
+        answer: "attendent"
+    },
+    {
+        question: "Complétez: Elle n'a jamais ____ ce film.",
+        options: ["vu", "voir", "voyait", "vu"],
+        answer: "vu"
+    },
+    {
+        question: "Quelle est la bonne traduction pour 'I would have done it if I had known'?",
+        options: ["Je l'aurais fait si j'avais su", "J'aurais fait si je savais", "Je l'ai fait si j'ai su", "Je le fais si je savais"],
+        answer: "Je l'aurais fait si j'avais su"
+    },
+    {
+        question: "Choisissez la bonne phrase: Nous devons ____ le projet d'ici demain.",
+        options: ["finit", "finir", "finissons", "finissant"],
+        answer: "finir"
+    },
+    {
+        question: "Quelle est la bonne traduction de 'Despite the rain, they went out'?",
+        options: ["Malgré la pluie, ils sont sortis", "Sous la pluie, ils sont restés", "À cause de la pluie, ils sont partis", "Après la pluie, ils sont sortis"],
+        answer: "Malgré la pluie, ils sont sortis"
+    },
+    {
+        question: "Choisissez la forme correcte: Il est probable qu'il ____ demain.",
+        options: ["vient", "vienne", "venait", "viendra"],
+        answer: "vienne"
+    },
+    {
+        question: "Complétez la phrase: Bien qu'elle ____ malade, elle est venue.",
+        options: ["sera", "était", "est", "soit"],
+        answer: "soit"
+    },
+    {
+        question: "Choisissez la bonne phrase pour traduire 'He would have been here if he could.'",
+        options: ["Il est ici s'il peut", "Il serait là s'il pouvait", "Il sera là s'il peut", "Il aurait été là s'il avait pu"],
+        answer: "Il aurait été là s'il avait pu"
+    },
+    {
+        question: "Quelle est la meilleure traduction pour 'The more I study, the better I understand.'?",
+        options: ["J'étudie et je comprends mieux", "Plus j'étudie, mieux je comprends", "Quand j'étudie plus, je comprends mieux", "En étudiant, je comprends bien"],
+        answer: "Plus j'étudie, mieux je comprends"
+    },
+    {
+        question: "Complétez: Si je ____ la vérité, je ne l'aurais pas fait.",
+        options: ["sachais", "savais", "avais su", "saurais"],
+        answer: "avais su"
     }
 ];
-document.getElementById("nameOfuser").textContent = localStorage.getItem("nameOfuser") ;
+
+
+function shuffle(arr) {
+    const num = 7 ;
+
+    for (var i = arr.length - 1; i >= 0; i--) {
+        for (var j = 0; j < num; j++) {
+            const rand = Math.floor(Math.random() * 5)
+            // [arr[i], arr[rand]] = [arr[rand], arr[i]];
+            var temp = arr[i];
+            arr[i] = arr[rand];
+            arr[rand] = temp;
+        }
+    }
+    return arr;
+}
+var d = shuffle(frenchTestQuestions);
+
+
+document.getElementById("nameOfuser").textContent = localStorage.getItem("nameOfuser");
+let counter = 0;
 let i = 0;
 function startOfQuiz() {
     let parentOfquestions = document.getElementById("divForQu");
@@ -75,23 +140,23 @@ function startOfQuiz() {
     </div>`
 }
 
-function aficcheResult(){
+function aficcheResult() {
     let divOfresult = document.getElementById("divForQu");
-    let numberFOrightAnsewerFormLocalstroage = parseInt(localStorage.getItem("numberOfrightanswer"))  ;
-    function returnNiveau(){
-        if(numberFOrightAnsewerFormLocalstroage <= 2){
+    let numberFOrightAnsewerFormLocalstroage = parseInt(localStorage.getItem("numberOfrightanswer"));
+    function returnNiveau() {
+        if (numberFOrightAnsewerFormLocalstroage <= 2) {
             return "A1"
         }
-        else if (numberFOrightAnsewerFormLocalstroage > 2 && numberFOrightAnsewerFormLocalstroage <=6){
+        else if (numberFOrightAnsewerFormLocalstroage > 2 && numberFOrightAnsewerFormLocalstroage <= 6) {
             return "B1"
         }
-        else if (numberFOrightAnsewerFormLocalstroage > 6 && numberFOrightAnsewerFormLocalstroage <=8){
+        else if (numberFOrightAnsewerFormLocalstroage > 6 && numberFOrightAnsewerFormLocalstroage <= 8) {
             return "B2"
         }
-        else if (numberFOrightAnsewerFormLocalstroage > 8 && numberFOrightAnsewerFormLocalstroage <=9){
+        else if (numberFOrightAnsewerFormLocalstroage > 8 && numberFOrightAnsewerFormLocalstroage <= 9) {
             return "C1"
         }
-        else if (numberFOrightAnsewerFormLocalstroage ===10 ){
+        else if (numberFOrightAnsewerFormLocalstroage === 10) {
             return "C2"
         }
     }
@@ -103,9 +168,6 @@ function aficcheResult(){
           </div>
         `
 }
-
-
-
 startOfQuiz()
 let a = 7;
 function Timer() {
@@ -117,7 +179,6 @@ function Timer() {
         ColorFortheRightAnswer()
         hiddenBtn()
     }
-
 }
 function statrSecons() {
     intervalId = setInterval(Timer, 1000);
@@ -125,24 +186,28 @@ function statrSecons() {
 statrSecons()
 function next() {
     a = 7;
-    if (i < 9) {
+    if (counter < 9) {
+        
+        AddToLocalStorage() ;
         document.getElementById("spanOftimer").textContent = a;
         clearInterval(intervalId);
-        i++
+        i++ ;
+        counter++ ; 
+        indexOfanswerChouaser = 100 ;
         startOfQuiz();
         selectionerLareponse();
-        statrSecons()
+        statrSecons() ;
     }
     else {
         let parentOfquestions = document.getElementById("divForQu");
-        parentOfquestions.textContent= ""
-    
+        parentOfquestions.textContent = ""
         aficcheResult()
-    } 
+    }
 }
 
-let indexOfrightanswer;
-let numberOFtherightanswer = 0 ; // scor
+let indexOfrightanswer  ;
+let indexOfanswerChouaser = 100 ;
+let numberOFtherightanswer = 0; // scor
 
 localStorage.setItem("numberOfrightanswer", numberOFtherightanswer);
 function selectionerLareponse() {
@@ -156,6 +221,7 @@ function selectionerLareponse() {
         elem.addEventListener('click', () => {
 
             if (a > 0) {
+                indexOfanswerChouaser = index ;
                 if (elem.textContent.slice(3) === frenchTestQuestions[i].answer) {
                     elem.classList.add("bg-green-600")
                     numberOFtherightanswer++
@@ -175,6 +241,7 @@ function selectionerLareponse() {
         })
     })
 }
+
 function ColorFortheRightAnswer() {
     let reponsOfuser = document.querySelectorAll(".reponsOfuser");
 
@@ -186,17 +253,41 @@ function hiddenBtn() {
     let btn = document.getElementById("btn-next");
     if (a <= 0) {
         btn.classList.toggle("block")
-        
+
     }
 }
 
 function StartQuizFromZero() {
 
-    localStorage.setItem("lastscor" , localStorage.getItem("numberOfrightanswer")) ;
+    localStorage.setItem("lastscor", localStorage.getItem("numberOfrightanswer"));
     i = 0;
+    counter = 0
     numberOFtherightanswer = 0
     localStorage.setItem("numberOfrightanswer", numberOFtherightanswer);
     startOfQuiz()
     statrSecons()
     selectionerLareponse();
+}
+
+
+
+function AddToLocalStorage(){
+    let dataFromLocalStorage = JSON.parse(localStorage.getItem("dataOfUser")) || [];
+        
+        
+        let indexOfuserInLocalStorage ;
+         dataFromLocalStorage.forEach((ele , index) =>{
+            if(ele.name === localStorage.getItem("nameOFuser")){
+                indexOfuserInLocalStorage = index ;
+            }
+        }) 
+        
+        dataFromLocalStorage[indexOfuserInLocalStorage].indexOfquestion = i ;
+        dataFromLocalStorage[indexOfuserInLocalStorage].indexOfquestionCorrect = indexOfrightanswer ;
+        dataFromLocalStorage[indexOfuserInLocalStorage].indexOfanswerOfuser = indexOfanswerChouaser  ;
+        dataFromLocalStorage[indexOfuserInLocalStorage].numbreOfrightAnswer = numberOFtherightanswer ;
+
+        
+        console.log(dataFromLocalStorage)
+
 }

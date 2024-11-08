@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style/output.css" rel="stylesheet">
+    <title>Rapport d'Évaluation - Institut Balzac</title>
+</head>
+
+<body class="bg-gray-100">
+    <header class="flex justify-between items-center bg-blue-900 text-white py-4 px-8">
+        <div>
+            <h1 class="text-3xl font-semibold">Institut Balzac</h1>
+            <p class="text-sm">Test de compétences en français</p>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span id="nameOfuser" class="text-lg font-medium">Nom de l'utilisateur</span>
+            <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M37 18.5C37 23.4603 35.0477 27.9646 31.8699 31.2867C28.5135 34.7951 23.7902 36.9847 18.5552 37C18.5368 37 18.5184 37 18.5 37C18.4816 37 18.4632 37 18.4448 37C13.2098 36.9847 8.48637 34.7951 5.13013 31.2867C1.95217 27.9646 0 23.4603 0 18.5C0 8.28274 8.28274 0 18.5 0C28.7173 0 37 8.28274 37 18.5ZM29.7131 27.75C27.0473 24.5217 23.0138 22.4642 18.5 22.4642C13.9862 22.4642 9.95284 24.5217 7.28675 27.75C9.95284 30.9782 13.9862 33.0357 18.5 33.0357C23.0138 33.0357 27.0473 30.9782 29.7131 27.75ZM18.5003 19.8213C22.1493 19.8213 25.1075 16.8632 25.1075 13.2142C25.1075 9.56519 22.1493 6.60706 18.5003 6.60706C14.8513 6.60706 11.8932 9.56519 11.8932 13.2142C11.8932 16.8632 14.8513 19.8213 18.5003 19.8213Z"
+                    fill="#FCFAFF" />
+            </svg>
+        </div>
+    </header>
+
+    <main class="flex flex-col items-center py-12">
+        <div class="bg-white p-10 rounded-lg shadow-lg text-center w-3/4 max-w-lg">
+            <h1 class="text-4xl font-bold text-blue-800 mb-4">Résultats de l'évaluation</h1>
+            <p class="text-2xl font-semibold">Votre score : <span class="text-blue-600">7</span> / 10</p>
+            <p class="text-xl mt-2">Niveau atteint : <span class="text-green-600">A2</span></p>
+            <p class="mt-4 text-lg">Score précédent : <span class="font-medium">5</span> / 10</p>
+            <button onclick="StartQuizFromZero()"
+                class="mt-8 px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
+                Redémarrer l'évaluation
+            </button>
+        </div>
+
+        <section id="questions-section" class="w-3/4 max-w-lg mt-12">
+            <h2 class="text-2xl font-semibold text-center mb-6">Détails des questions</h2>
+            <!-- Repeatable question card -->
+            <div class="mb-4 p-4 bg-gray-50 border border-gray-300 rounded-lg shadow-sm">
+                <h3 class="text-xl font-medium">Question N <span>1</span> / 10</h3>
+                <p class="text-lg mt-2 mb-4">${frenchTestQuestions[i].question}</p>
+                <div class="space-y-2">
+                    <!-- Sample answer options -->
+                    <span class="reponsOfuser border border-gray-400 p-2 rounded-md">Option 1</span>
+                    <span class="reponsOfuser border border-gray-400 p-2 rounded-md bg-green-200">Option 2 (Correct)</span>
+                    <span class="reponsOfuser border border-gray-400 p-2 rounded-md">Option 3</span>
+                    <span class="reponsOfuser border border-gray-400 p-2 rounded-md bg-red-200">Option 4 (Incorrect)</span>
+                </div>
+            </div>
+            <!-- Repeat for other questions -->
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-4 text-center mt-12">
+        <p>&copy; 2024 Institut Balzac. Tous droits réservés.</p>
+    </footer>
+</body>
+
+</html>

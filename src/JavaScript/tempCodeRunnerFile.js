@@ -1,1 +1,1 @@
- console.log(reponsOfuser)
+  // dataFromLocalStorage[indexOfuserInLocalStorage].numbreOfrightAnswer = 0 ;

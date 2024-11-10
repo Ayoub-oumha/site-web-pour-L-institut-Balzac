@@ -1,1 +1,1 @@
-#777
+./src/JavaScript/*.{html,js}
